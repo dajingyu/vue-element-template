@@ -14,7 +14,7 @@ module.exports = {
   // add your custom rules here
   //it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
-    "no-alert": 0,
+    "no-alert": 2,
     "no-console": 0,
     semi: [2, "always"],
     "array-bracket-spacing": [2, "always"],
