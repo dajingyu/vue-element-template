@@ -15,7 +15,7 @@ module.exports = {
   //it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
     "no-alert": 2,
-    "no-console": 0,
+    "no-console": 2,
     semi: [2, "always"],
     "array-bracket-spacing": [2, "always"],
     "no-unused-vars": [2, { vars: "all", args: "none" }], //不能有声明后未被使用的变量或参数
