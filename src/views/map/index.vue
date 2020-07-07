@@ -3,19 +3,10 @@
     class="dashboard-container"
     style="width: 100%; height: 100%;"
   >
-    <!-- 引入ant 按钮示例 -->
-    <h1>引入ant 按钮示例</h1>
-    <a-button type="primary">
-      Primary
-    </a-button>
-    <!-- 引入iframe 示例 -->
-    <h1>引入iframe示例</h1>
-
-    <iframe
-      src="https://www.baidu.com/"
-      frameborder="0"
-      width="100%"
-      style="min-height: calc(100vh - 50px);"
+    <!-- 引入arcgis 示例 -->
+    <div
+      id="map"
+      style=" height:1000px"
     />
   </div>
 </template>
@@ -23,29 +14,31 @@
 <script>
 import { mapGetters } from "vuex";
 import { loadModules } from "esri-loader";
-
+    
 export default {
   name: "Dashboard",
   computed: {
-    ...mapGetters([ "name" ])
+    ...mapGetters([ "name" ]),
   },
   created() {
     loadModules([ "esri/Map", "esri/views/MapView", "dojo/domReady!" ])
       .then(([ Map, MapView ]) => {
+        
         // doSomeThing
         let map = new Map({
-          basemap: "topo" // 底图类型，详见BaseMap类
-        });
-        this.view = new MapView({
-          container: "map", // 视图的容器
-          map: map, // Map的实例放入视图中
-          center: [ 104.06, 30.67 ], // 初始显示的地图中心点，经纬度
-          zoom: 10 // 当前地图缩放等级d
-        });
+      basemap: "topo", // 底图类型，详见BaseMap类
+    });
+    this.view = new MapView({
+      container: "map", // 视图的容器
+      map: map, // Map的实例放入视图中
+      center: [ 104.06, 30.67 ], // 初始显示的地图中心点，经纬度
+      zoom: 10, // 当前地图缩放等级d
+    });
       })
-      .catch(err => {
+      .catch((err) => {
         // console.log(err);
       });
+    
   }
 };
 </script>
@@ -79,5 +72,6 @@ body {
     width: 100%;
     height: 100%;
   }
+  
 }
 </style>

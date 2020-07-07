@@ -12,8 +12,15 @@ import App from "./App";
 import store from "./store";
 import router from "./router";
 
+import VCharts from "v-charts";
+
 import "@/icons"; // icon
 import "@/permission"; // permission control
+import Antd from "ant-design-vue";
+import "ant-design-vue/dist/antd.css";
+
+Vue.use(Antd);
+Vue.use(VCharts);
 
 /**
  * If you don't want to use mock-server
