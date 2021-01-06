@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.6.3",
-    "axios": "0.18.1",
+    "axios": "0.21.1",
     "echarts": "^4.8.0",
     "element-ui": "2.13.2",
     "esri-loader": "^2.14.0",
